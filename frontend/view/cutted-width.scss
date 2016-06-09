@@ -1,0 +1,10 @@
+#cutted-width {
+
+	overflow: hidden;
+	max-width: 400px;
+	margin: 0 auto;
+	img {
+		transition: all .3s ease;
+	}
+
+}

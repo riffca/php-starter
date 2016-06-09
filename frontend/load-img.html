@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>File</title>
+</head>
+<body>
+	<input type="text" onkeypress="log(this.value)">
+							<div class="div"></div>
+	<input type="file" id="file" multiple>
+	<button onclick="getFiles()">click</button>
+
+	<script>
+		$ = document.querySelector.bind(document);
+		
+		function getFiles(){
+			'use strict';
+			let files = [].slice.call($('#file').files);
+			files.forEach(item => {
+				console.log(item);
+			});
+		}
+
+		function log(arg) {
+			$('.div').innerHtml = arg;
+		}
+	</script>
+</body>
+</html>
